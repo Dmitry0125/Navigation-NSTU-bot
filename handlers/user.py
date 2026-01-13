@@ -4,10 +4,8 @@ from aiogram.types import Message, FSInputFile
 from lexicon.lexicon import LEXICON_RU
 
 from keyboards.start_kb import start
-from keyboards.corp_kb import corp
 from keyboards.target_kb import target
 from routes.navigation_service import NavigationService
-# from keyboards.audience_kb import audience
 from keyboards.continue_kb import continue_kb
 
 # Инициализируем роутер уровня модуля
@@ -38,11 +36,6 @@ async def process_answer(message: Message):
     await message.answer("Помогу найти аудиторию в 3а или 3б корпусе.\n"
              "Все маршруты начинаются от **1 корпуса**.\n\n"
              "**Выбери корпус:**", reply_markup=target, parse_mode="Markdown")
-
-# # Этот хэндлер срабатывает на сообщение "1 корпус"
-# @user_router.message(F.text == LEXICON_RU['building1'])
-# async def process_answer(message: Message):
-#     await message.answer(text=LEXICON_RU['building1_answer'], reply_markup=target)
 
 # Этот хэндлер срабатывает на сообщение "⬅ Главное меню"
 @user_router.message(F.text == LEXICON_RU['back_to_main_menu'])
@@ -108,11 +101,6 @@ async def process_room_input(message: Message):
     user_id = message.from_user.id
     room_input = message.text.strip()
     
-    # Пропускаем служебные кнопки
-    # if room_input in ["3a корпус", "3б корпус", "Примеры аудиторий 📋", 
-    #                   "Назад к выбору корпуса", "Найти другую аудиторию", "Сменить корпус"]:
-    #     return
-    
     # Проверяем, выбран ли корпус
     if user_id not in user_selections:
         await message.answer(
@@ -147,8 +135,3 @@ async def process_room_input(message: Message):
             f"Введи номер аудитории для {target_corpus} корпуса\n\n",
             parse_mode="Markdown"
         )
-
-# # Этот хэндлер срабатывает на сообщение "Аудитория"
-# @user_router.message(F.text == LEXICON_RU['audience'])
-# async def process_answer(message: Message):
-#     await message.answer(text=LEXICON_RU['audience_answer'])

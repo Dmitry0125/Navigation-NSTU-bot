@@ -3,7 +3,6 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 from lexicon.lexicon import LEXICON_RU
 
-# button_back = KeyboardButton(text=LEXICON_RU['back'])
 button_building3a = KeyboardButton(text=LEXICON_RU['building3a'])
 button_building3b = KeyboardButton(text=LEXICON_RU['building3b'])
 

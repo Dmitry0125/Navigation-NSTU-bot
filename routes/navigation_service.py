@@ -126,7 +126,6 @@ class NavigationService:
         if not room_info:
             if suggestion:
                 return f"❌ Аудитория '{normalized}' не найдена.", False
-                # return f"❌ Аудитория '{normalized}' не найдена.\n\n{suggestion}", False
             return f"❌ Аудитория '{normalized}' не найдена в базе данных.", False
         
         # Проверяем корпус
