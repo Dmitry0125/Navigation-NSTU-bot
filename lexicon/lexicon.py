@@ -13,11 +13,20 @@ LEXICON_RU: dict[str, str] = {
     'audience_answer': "Введи номер аудитории:",
 
     'building1': '1 корпус',
-    'building3a': '3a корпус',
-    'building3b': '3б корпус',
+    'building3a': '3 корпус',
+    'building3b': '8 корпус',
     'building1_answer': 'Ты у 1 корпус. Куда тебе нужно?',
     
-    'other_answer': 'К сожалению, я не знаю как отвечать на такое сообщение(\nПопробуй воспользоваться командой /help (или написать в поддержку ...)'
+    'other_answer': 'К сожалению, я не знаю как отвечать на такое сообщение(',
+
+    'dormitorie1': 'Общежитие №1',
+    'dormitorie2': 'Общежитие №2',
+    'dormitorie3': 'Общежитие №3',
+    'dormitorie4': 'Общежитие №4',
+    'dormitorie5': 'Общежитие №5',
+    'dormitorie7': 'Общежитие №7',
+    'dormitorie8': 'Общежитие №8',
+    'dormitorie10': 'Общежитие №10'
 }
 LEXICON_COMMANDS_RU: dict[str, str] = {
     '/start': 'Перезапустить бота',
