@@ -163,7 +163,7 @@ async def process_answer(message: Message):
 @user_router.message(F.text == LEXICON_RU['Gorsky_Campus'])
 async def process_answer(message: Message):
     img = FSInputFile("maps/Gorsky_campus.png")
-    await message.answer_photo(img, caption="Горский кампус\nhttps://go.2gis.com/jMqsa")
+    await message.answer_photo(img, caption="Горский кампус\nhttps://go.2gis.com/2EdGP")
 
 # Обработка ввода номера аудитории (любое другое сообщение)
 @user_router.message(F.text)
